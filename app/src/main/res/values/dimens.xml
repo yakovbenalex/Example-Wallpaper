@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  margins  -->
+    <dimen name="margin_default">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_large_plus">48dp</dimen>
+
+    <!--  text sizes  -->
+    <dimen name="textSizeRegular">14sp</dimen>
+    <dimen name="textSizeHeading">18sp</dimen>
 </resources>

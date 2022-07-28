@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PhotoListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhotoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/rv_item_photo" />
+
+    <ProgressBar
+        android:id="@+id/pbWaiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvPhotoListInfoMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_large_plus"
+        android:text="@string/waiting_for_the_internet"
+        android:textSize="@dimen/textSizeHeading"
+        android:visibility="gone" />
+
+</FrameLayout>

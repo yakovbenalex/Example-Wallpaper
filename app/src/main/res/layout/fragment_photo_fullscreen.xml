@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PhotoFullscreenFragment">
+
+    <ProgressBar
+        android:id="@+id/pbPhotoLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/pbWallpaperSetting"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="55dp" />
+
+    <TextView
+        android:id="@+id/tvInfoMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/textSizeHeading" />
+
+    <ImageView
+        android:id="@+id/ivPhotoFullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_fullscreen_view"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/buttonSetAsWallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:enabled="false"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:text="@string/set_as_wallpaper"
+        android:textAllCaps="false"
+        />
+
+</FrameLayout>

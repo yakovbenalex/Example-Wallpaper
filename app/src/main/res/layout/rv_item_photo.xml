@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewPhoto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default"
+    android:paddingTop="@dimen/margin_default"
+    android:paddingBottom="@dimen/margin_default"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default">
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/photo"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPhoto"
+            android:contentDescription="@string/photo" />
+
+        <ProgressBar
+            android:id="@+id/pbPhotoLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/ivPhoto"
+            app:layout_constraintStart_toStartOf="@+id/ivPhoto"
+            app:layout_constraintTop_toTopOf="@+id/ivPhoto" />
+
+
+        <TextView
+            android:id="@+id/tvAuthorPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textSize="@dimen/textSizeRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPhoto" />
+
+        <TextView
+            android:id="@+id/tvLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textSize="@dimen/textSizeRegular"
+            app:layout_constraintBottom_toBottomOf="@id/ivLikes"
+            app:layout_constraintEnd_toStartOf="@+id/ivLikes"
+            app:layout_constraintTop_toTopOf="@id/ivLikes" />
+
+        <TextView
+            android:id="@+id/tvInfoMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_medium"
+            android:textSize="@dimen/textSizeRegular"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPhoto"
+            app:layout_constraintEnd_toEndOf="@+id/ivPhoto"
+            app:layout_constraintStart_toStartOf="@+id/ivPhoto"
+            app:layout_constraintTop_toTopOf="@+id/ivPhoto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
